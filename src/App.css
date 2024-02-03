@@ -1,38 +1,42 @@
-.App {
+/* App.css o tu archivo de estilos principal */
+
+.biografia {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.foto-perfil {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+i {
+  margin-right: 5px;
+}
+
+.redes-sociales-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  font-size: 24px;
+  background-color: #e0f7fa; /* Fondo azul claro - Puedes ajustarlo según tus preferencias */
+  padding: 10px; /* Agrega un espaciado interno */
+  border-radius: 10px; /* Añade bordes redondeados */
 }
 
-.App-link {
-  color: #61dafb;
+.redes-sociales-container a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.redes-sociales-container a:hover {
+  color: #007bff;
 }
