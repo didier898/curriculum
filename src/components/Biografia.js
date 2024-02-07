@@ -1,7 +1,12 @@
 // Biografia.js
-import React from 'react';
+import React, {useState} from 'react';
 
-const Biografia = () => {
+const Biografia = ({ onNextClick }) => {
+    const [seccion, setSeccion]= useState('biografia')
+    const handleNextclick =() =>{
+        setSeccion('acerca-de-mi');
+        onNextClick();
+    }
   return (
     <div className='biografia'>
       <img src="/images/Foto.jpg" alt="Foto de perfil" className="foto-perfil" />
@@ -14,8 +19,18 @@ const Biografia = () => {
         <i className="fas fa-phone-alt"></i> Teléfono: +57 3012758256
       </p>
       <p>
+        <i className="fas fa-car"></i> Licencia B1 
+      </p>
+      <p>
+        <i className="fas fa-cogs"></i> Matrícula de Ingeniero #AT206-162027
+      </p>
+      <p>
+        <i className="fas fa-globe"></i> Idiomas: 🇪🇸 Español, 🇬🇧 Inglés
+        </p>
+      <p>
       <i className="fas fa-home"></i>Dirección: Concepción, Santa Marta. Disponibilidad para viajar<i className="fas fa-plane"></i>
       </p>
+      <button onClick={handleNextclick}>Siguiente</button>
     </div>
   );
 };
