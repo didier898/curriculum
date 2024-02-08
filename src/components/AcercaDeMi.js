@@ -1,7 +1,14 @@
 // AcercaDeMi.js
 import React from 'react';
 
-const AcercaDeMi = ({ onBackClick}) => {
+const AcercaDeMi = ({ onNextClick, onBackClick }) => {
+  const handleNextClick = () => {
+    onNextClick(); // Llama a la función prop proporcionada por el componente padre
+  };
+
+  const handleBackClick = () => {
+    onBackClick(); // Llama a la función prop proporcionada por el componente padre
+  };
   return (
     <div className='acercademi'>
       <img src="/images/Foto.jpg" alt="Foto de perfil" className="foto-perfil" />
@@ -11,7 +18,8 @@ const AcercaDeMi = ({ onBackClick}) => {
         <p>
             Además de mis habilidades técnicas y mi compromiso con la excelencia, ofrezco a cualquier equipo en el que me integre una capacidad probada para abordar desafíos complejos y diseñar soluciones eficientes. Mi experiencia en el desarrollo ágil y la gestión de proyectos me permite entregar productos de alta calidad en plazos ajustados. Estoy particularmente enfocado en optimizar procesos para aumentar la eficiencia y reducir costos, contribuyendo así al éxito a largo plazo de la empresa. Mi capacidad para adaptarme rápidamente a nuevas tecnologías y mi enfoque orientado a resultados me permiten aportar soluciones innovadoras que impulsan el crecimiento y la competitividad de la organización. Estoy entusiasmado por la oportunidad de aplicar mis habilidades y conocimientos para llevar a la empresa hacia nuevos niveles de éxito.
         </p>
-        <button onClick={onBackClick}>Atrás</button>
+        <button onClick={handleBackClick}>Atrás</button>
+      <button onClick={handleNextClick}>Siguiente</button>
     </div>
   );
 };
